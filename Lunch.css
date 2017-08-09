@@ -1,0 +1,104 @@
+
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height:720px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+		
+      }
+	
+	.left-sidebar{
+	 width:100%!important;
+	height:300px !important;	
+	overflow:scroll;
+  }
+  .centerbar{
+	  width:100%!important;  
+  }
+  .rightsidebar{
+	  
+	  width:100%!important; 
+	
+  }
+      .row.content {height:auto;}
+		#imgselected{display:none;}
+	
+ }
+
+
+
+  .left-sidebar{
+	  width:20%;
+	  
+	overflow-y:scroll;
+	
+  }
+  .centerbar{
+	  width:50%;
+	    
+	  
+  }
+  .rightsidebar{
+	  width:30%; 
+	  background-color: #f1f1f1;
+	overflow-y:scroll;
+  }
+
+.imgbutton{
+border:none!important;
+}
+#imgselected{
+height:300px;
+background-repeat:no-repeat;
+background-size:cover;
+}
+#cblist{
+list-style-type:none;
+}
+#cblist li{display:inline;}
+.socialDiv{
+position:fixed;
+left:0;
+top:35%;
+ padding: 0px;
+
+}
+.social{
+    list-style: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+
+
+#mySignUpModal,#myModal,.modal-content{
+top:5%;
+}
+
+.txtred
+{color:red;
+}

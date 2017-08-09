@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Checkout</title>
+  <meta charset="utf-8">
+  
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="home page.css" rel="stylesheet" type="text/css">
+  <link href="stuck.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="js/jquery.shop.js"></script>  
+ <script src="home page.js"></script>
+ <link href="careers.css" rel="stylesheet" type="text/css">
+ <script src="modalValidation.js"></script>
+
+  
+</head>
+<body id="myPage" "checkout-page" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="homepage.html"><img class="img-responsive" src="Images/logo.png"></img></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="aboutus.html">ABOUT</a></li>
+        <li><a href="Menu.html">MENU</a></li>
+        <li><a href="blog.html">FOOD BLOG</a></li>
+        <li><a href="careers.html">CAREERS</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+		<li><a href="#mySignUpModal" data-toggle="modal" data-target="#mySignUpModal"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
+     <li><a href="#myLoginModal" data-toggle="modal" data-target="#myLoginModal"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+		 <li><a href="Add to Cart.html" ><span class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></span></a></li>
+		
+		</ul>
+    </div>
+  </div>
+</nav>
+<!-- Login Modal -->
+<div id="myLoginModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+   <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body">
+        <form autocomplete="on" method="post" >
+  <div class="form-group">
+    <label for="Username">Email address<b class="txtred">*</b>:</label>
+    <input type="email" class="form-control" name="Username">
+  </div>
+  <div class="form-group">
+    <label for="Password">Password<b class="txtred">*</b>:</label>
+    <input type="password" class="form-control" name="Password">
+  </div>
+  <button name="Submit" type="submit" class="btn btn-default" id="loginButton">Login</button>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>	
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Sign up Modal -->
+<div id="mySignUpModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" id="closeButton">&times;</button>
+        <h4 class="modal-title">Sign up!</h4>
+      </div>
+      <div class="modal-body">
+        <form autocomplete="on" method="get">
+	 <div class="form-group">
+    <label for="firstname">First Name<b class="txtred">*</b>:</label>
+    <input type="text" class="form-control" id="firstname">
+  </div>
+	<div class="form-group">
+    <label for="lastname">Last Name<b class="txtred">*</b>:</label>
+    <input type="text" class="form-control" id="lastname">
+  </div>
+  <div class="form-group">
+    <label for="regEmail">Email address<b class="txtred">*</b>:</label>
+    <input type="email" class="form-control" id="regEmail"> <br>
+	<span id="emailSpan" class="txtred"> </span>
+  </div>
+  <div class="form-group">
+    <label for="pass">Password<b class="txtred">*</b>:</label>
+    <input type="password" class="form-control" id="pass"> <br>
+	<span id="passSpan" class="txtred"> </span>
+  </div>
+	<div class="form-group">
+    <label for="confirmpass">Confirm Password<b class="txtred">*</b>:</label>
+    <input type="password" class="form-control" id="confirmpass"> <br>
+	<span id="confirmPassSpan" class="txtred"> </span>
+  </div>
+  <button type="submit" class="btn btn-default" id="registerUser">Sign up</button>
+	<span id="warning1" class="txtred"> </span>
+	<br><span id="registerSuccess" > </span>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="closeButton">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr></br>
+<div id="site">
+	<header id="masthead">
+		<h1>Your Order <span class="tagline">Serving Healthy Food</h1>
+	</header>
+	<div id="content">
+		<h1 style="color: #bf5479"> Checkout</h1>
+			<table id="checkout-cart" class="shopping-cart">
+			  <thead>
+				<tr>
+					<th scope="col">Item</th>
+					<th scope="col">Qty</th>
+					<th scope="col">Price</th>
+				</tr>
+			  </thead>
+			  <tbody>
+			  
+			  </tbody>
+			</table>
+		 <div id="pricing">
+			
+			<p id="shipping">
+				<strong>Shipping</strong>: <span id="sshipping"></span>
+			</p>
+			
+			<p id="sub-total">
+				<strong>Total</strong>: <span id="stotal"></span>
+			</p>
+		 </div>
+		 
+		 <form action="order.html" method="post" id="checkout-order-form">
+		 	<h2>Your Details</h2>
+		 	
+		 	<fieldset id="fieldset-billing">
+		 		<legend>Billing</legend>
+		 		<div>
+		 			<label for="name">Name</label>
+		 			<input type="text" name="name" id="name" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="email">Email</label>
+		 			<input type="text" name="email" id="email" data-type="expression" data-message="Not a valid email address" />
+		 		</div>
+		 		<div>
+		 			<label for="city">City</label>
+		 			<input type="text" name="city" id="city" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="address">Address</label>
+		 			<input type="text" name="address" id="address" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="zip">ZIP Code</label>
+		 			<input type="text" name="zip" id="zip" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="country">Country</label>
+		 			<select name="country" id="country" data-type="string" data-message="This field cannot be empty">
+		 				<option value="">Select</option>
+		 				<option value="US">USA</option>
+		 				<option value="IT">Italy</option>
+		 			</select>
+		 		</div>
+		 	</fieldset>
+		 	
+		 	<div id="shipping-same">Same as Billing <input type="checkbox" id="same-as-billing" value=""/></div>
+		 	
+		 	<fieldset id="fieldset-shipping">
+		 		
+		 		<legend>Shipping</legend>
+		 		
+		 		<div>
+		 			<label for="sname">Name</label>
+		 			<input type="text" name="sname" id="sname" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="semail">Email</label>
+		 			<input type="text" name="semail" id="semail" data-type="expression" data-message="Not a valid email address" />
+		 		</div>
+		 		<div>
+		 			<label for="scity">City</label>
+		 			<input type="text" name="scity" id="scity" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="saddress">Address</label>
+		 			<input type="text" name="saddress" id="saddress" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="szip">ZIP Code</label>
+		 			<input type="text" name="szip" id="szip" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="scountry">Country</label>
+		 			<select name="scountry" id="scountry" data-type="string" data-message="This field cannot be empty">
+		 				<option value="">Select</option>
+		 				<option value="US">USA</option>
+		 				<option value="IT">Italy</option>
+		 			</select>
+		 		</div>
+		 	</fieldset>
+		 	
+		 	<p><input type="submit" id="submit-order" value="Submit" class="btn" /></p>
+		 
+		 </form>
+	</div>
+	
+	
+
+</div>
+
+<!-- Container (Footer Section) -->
+<div  class="container-fluid" style ="background-color:#84a96c;color:black">
+  
+  <div class="row ">
+    <div class="col-xs-6 col-sm-2 text-center">
+		<ul class="menu">
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="Menu.html">Menu</a></li>
+        <li><a href="blog.html">Food Blog</a></li>
+         <li><a href="health.html">Health</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		</ul>
+    </div>
+	<div class="col-xs-6  col-sm-2 text-center">
+		<ul class="menu" >
+        <li><a href="Terms.html">Terms and Conditions</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+		<li><a href="careers.html">Careers</a></li>
+        <li><a href="MyAccount.html">My Account</a></li>
+		<li><a href="#reviews">Reviews</a></li>
+		</ul>
+    </div>
+	<div class="col-xs-12 col-sm-4  text-center">
+      <p><b>Newsletter Sigup</b></p>
+      <p>Get notified each time we add our new recipe</p>
+      <form class="form-inline ">Sign up of News and offers
+    <br>
+   <input type="email" class="form-control"  placeholder="Email Address">
+   <button type="button" class="btn"><i class="fa fa-paper-plane"></i></button>
+ </form>
+    </div>
+	<div class=" col-xs-12 col-sm-4 text-right contactFitfoodie" >
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span><a href="tel:+00 1515151515">+00 1515151515</a></p>
+      <p><span class="glyphicon glyphicon-envelope"></span><a href="mailto:contact@fitfoodie.com"> contact@fitfoodie.com </a></p>
+    </div>
+  </div>
+<br>
+ <div class="row ">
+    
+<div class="col-xs-12 col-sm-12 text-center">&copy; 2016 FitFoodie. All rights reserved 
+</div>
+</div>
+<div class="socialDiv" >
+	<ul class="social">
+    <li><a href="https://twitter.com/fitfoodie" title="Twitter" >
+		<i class="fa fa-twitter-square fa-2x"  ></i>
+        </a></li>
+	<li><a href="https://www.facebook.com/fitfoodie" title="Facebook"  >
+		<i class="fa fa-facebook-square fa-2x" ></i>
+        </a></li>
+    <li><a href="https://www.instagram.com/fitfoodie" title="Instagram" >
+		<i class="fa fa-instagram fa-2x"  ></i>
+        </a></li>
+    <li><a href="https://in.pinterest.com/fitfoodie" title="Pinterest" >
+		<i class="fa fa-pinterest-square fa-2x"></i>
+        </a></li>
+	<li><a href="https://www.snapchat.com/fitfoodie" title="Snapchat">
+		<i class="fa fa-snapchat-square fa-2x" ></i>
+        </a>
+	</li>
+  </ul>
+</div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+.slide5 {
+    min-height: 400px;
+    background-size: cover;
+    background-position: center center;
+}
+.slide5 {
+    background-image: url("Images/healthy-food-background.jpg");
+}
+healthy-food-background
+
+.banner{
+	background: url(Images/banner.jpg) no-repeat center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	min-height:640px;
+	text-align:center;
+}
+
+.header{
+	margin:4em 2em;
+}
+
+.clearfix:before,
+.clearfix:after,
+.logo {
+	padding: 0em 0em 2em;
+}
+.banner-info h1 {
+	color: #fff;
+	font-size: 3em;
+	font-family: 'aleolight';
+	width: 44%;
+	line-height:1.5em;
+	margin: 0 auto;
+}
+.logo img {
+	width: 30%;
+}
+.banner {
+	min-height: 450px;
+}

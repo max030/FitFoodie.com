@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="home page.css" rel="stylesheet" type="text/css">
+  <link href="stuck.css" rel="stylesheet" type="text/css">
+  <script src="home page.js"></script>
+<script src="modalValidation.js"></script>
+
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="homepage.html"><img class="img-responsive" src="Images/logo.png"></img></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="aboutus.html">ABOUT</a></li>
+        <li><a href="Menu.html">MENU</a></li>
+        <li><a href="blog.html">FOOD BLOG</a></li>
+        <li><a href="careers.html">CAREERS</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+		<li><a href="#mySignUpModal" data-toggle="modal" data-target="#mySignUpModal"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
+     <li><a href="#myLoginModal" data-toggle="modal" data-target="#myLoginModal"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+		 <li><a href="Add to Cart.html" ><span class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></span></a></li>
+		
+		</ul>
+    </div>
+  </div>
+</nav>
+<!-- Login Modal -->
+<div id="myLoginModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+   <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body">
+        <form autocomplete="on" method="post" >
+  <div class="form-group">
+    <label for="Username">Email address<b class="txtred">*</b>:</label>
+    <input type="email" class="form-control" name="Username">
+  </div>
+  <div class="form-group">
+    <label for="Password">Password<b class="txtred">*</b>:</label>
+    <input type="password" class="form-control" name="Password">
+  </div>
+  <button name="Submit" type="submit" class="btn btn-default" id="loginButton">Login</button>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>	
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Sign up Modal -->
+<div id="mySignUpModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" id="closeButton">&times;</button>
+        <h4 class="modal-title">Sign up!</h4>
+      </div>
+      <div class="modal-body">
+        <form autocomplete="on" method="get">
+	 <div class="form-group">
+    <label for="firstname">First Name<b class="txtred">*</b>:</label>
+    <input type="text" class="form-control" id="firstname">
+  </div>
+	<div class="form-group">
+    <label for="lastname">Last Name<b class="txtred">*</b>:</label>
+    <input type="text" class="form-control" id="lastname">
+  </div>
+  <div class="form-group">
+    <label for="regEmail">Email address<b class="txtred">*</b>:</label>
+    <input type="email" class="form-control" id="regEmail"> <br>
+	<span id="emailSpan" class="txtred"> </span>
+  </div>
+  <div class="form-group">
+    <label for="pass">Password<b class="txtred">*</b>:</label>
+    <input type="password" class="form-control" id="pass"> <br>
+	<span id="passSpan" class="txtred"> </span>
+  </div>
+	<div class="form-group">
+    <label for="confirmpass">Confirm Password<b class="txtred">*</b>:</label>
+    <input type="password" class="form-control" id="confirmpass"> <br>
+	<span id="confirmPassSpan" class="txtred"> </span>
+  </div>
+  <button type="submit" class="btn btn-default" id="registerUser">Sign up</button>
+	<span id="warning1" class="txtred"> </span>
+	<br><span id="registerSuccess" > </span>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="closeButton">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div id="bg-fade-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+<!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="slide1"></div>
+        </div>
+        <div class="item">
+            <div class="slide2"></div>
+        </div>
+        <div class="item">
+            <div class="slide3"></div>
+        </div>
+    </div><!-- .carousel-inner --> 
+    <div class="container carousel-overlay text-center">
+        <h1>Get your Healthy Food orders</h1>
+        <p class="lead"> WELCOME TO FIT FOODIE! Transform your FOOD into a Healthy Blessing!</p>
+        
+    </div>
+</div>
+<div  class="container-fluid text-center">
+ 
+ <h2>HOW IT WORKS</h2>
+  
+  <div class="row slide">
+    <div class="col-sm-4">
+       <img src="Images/menu.png" class="img-responsive" alt="menu" width="100" height="100" style="margin:auto;" >
+      <h4>Choose from the Menu</h4>
+    </div>
+    <div class="col-sm-4">
+       <img src="Images/customize.jpg" class="img-responsive" alt="customize order" width="100" height="100" style="margin:auto;">
+      <h4>Customize your dish</h4>
+    </div>
+	<div class="col-sm-4">
+       <img src="Images/cart.png" class="img-responsive" alt="cart" width="100" height="100" style="margin:auto;">
+      <h4>Save and place order</h4>
+    </div>
+    </div>
+    
+  </div>
+</div>
+<div id="menu" class="container-fluid">
+  <div class="text-center">
+     <h2>Hungry<i class="fa fa-question" style="font-size:35px;"></i><i class="fa fa-question" style="font-size:35px;"></i></h2>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-2 col-xs-12">
+     <a href="breakfast.html"> <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Breakfast</h1>
+        </div>
+        <div class="panel-body">
+          <img src="Images/Breakfasticon.jpg" class="img-responsive" alt="drinks" width="400" height="400" style="margin:auto;">
+        </div>
+        <div class="panel-footer">
+          <img src="Images/breakfast.jpg" class="img-responsive" alt="drinks" width="100" height="100" style="margin:auto;">
+        </div>
+</a>
+      </div>
+    </div>
+    <div class="col-sm-2 col-xs-12">
+      <a href="Lunch.html">  <div class="panel panel-default text-center">
+        <div class="panel-footer">
+          <img src="Images/foood2.jpg" class="img-responsive" alt="drinks" width="100" height="100" style="margin:auto;">
+        </div>
+        <div class="panel-body">
+          <img src="Images/lunch.jpg" class="img-responsive" alt="drinks" width="400" height="400" style="margin:auto;">
+        </div>
+        <div class="panel-heading">
+          <h1>Lunch</h1>
+          
+        </div>
+      </div>
+</a>
+    </div>
+    <div class="col-sm-2 col-xs-12">
+       <a href="Dinner.html"> <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Dinner</h1>
+        </div>
+        <div class="panel-body">
+         <img src="Images/dinner.jpg" class="img-responsive" alt="drinks" width="400" height="400" style="margin:auto;">
+        </div>
+        <div class="panel-footer">
+          <img src="Images/food.png" class="img-responsive" alt="drinks" width="100" height="100" style="margin:auto;">
+        </div>
+      </div></a>
+    </div>
+  
+   <div class="col-sm-2 col-xs-12">
+      <a href="drinks.html">  <div class="panel panel-default text-center">
+        <div class="panel-footer">
+          <img src="Images/drink.jpg" class="img-responsive" alt="drinks" width="100" height="400" style="margin:auto;">
+        </div>
+        <div class="panel-body">
+          <img src="Images/drinks.jpg" class="img-responsive" alt="drinks" width="400" height="400" style="margin:auto;">
+        </div>
+        <div class="panel-heading">
+          <h1>Drinks</h1>
+          
+        </div>
+      </div></a>
+    </div>
+    <div class="col-sm-2 col-xs-12">
+     <a href="snacks.html">   <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Snacks</h1>
+        </div>
+        <div class="panel-body">
+         <img src="Images/snack.jpeg" class="img-responsive" alt="drinks" width="400" height="100" style="margin:auto;">
+        </div>
+        <div class="panel-footer">
+          <img src="Images/snack_icon.png" class="img-responsive" alt="drinks" width="100" height="100" style="margin:auto;">
+        </div>
+      </div></a>
+    </div>
+	 <div class="col-sm-2 col-xs-12">
+      <a href="desserts.html">  <div class="panel panel-default text-center">
+        <div class="panel-footer">
+          <img src="Images/dessert_icon.jpg" class="img-responsive" alt="drinks" width="100" height="100" style="margin:auto;">
+        </div>
+        <div class="panel-body">
+          <img src="Images/dessert.jpg" class="img-responsive" alt="drinks" width="400" height="400" style="margin:auto;">
+        </div>
+        <div class="panel-heading">
+          <h1>Dessert</h1>
+          
+        </div>
+      </div></a>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="blog" class="container-fluid text-center bg-grey">
+  <h2>DISHES OF THE WEEK</h2><br>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/dish1.jpg" alt="dish1" width="400" height="300">
+        <p><strong>Quinoa and black beans</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/dish2.jpg" alt="New York" width="400" height="300">
+        <p><strong>Heather's Cilantro, Black Bean, and Corn Salsa</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="images/dish3.jpg" alt="San Francisco" width="400" height="300">
+        <p><strong>Greek Island Chicken Shish Kebabs</strong></p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>What our customers say</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div id="reviews" class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Making dinner in the car and order @foodstudio during your commute home, have it arrive right after you walk in to your apartment."<br><span style="font-style:normal;">Jane Shindings,Boston</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Just ordered food on the internet without having to talk to a human again. Thanks @foodstudio for helping me make healthy meals online."<br><span style="font-style:normal;">Ashley John,NY</span></h4>
+      </div>
+      <div class="item">
+        <h4>"It's amazing how easily I am able to eat fresh and healthy food delivered by @foodstudio"<br><span style="font-style:normal;">Shonda Pearson,California</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<!-- Container (Footer Section) -->
+<div  class="container-fluid" style ="background-color:#84a96c;color:black">
+  
+  <div class="row ">
+    <div class="col-xs-6 col-sm-2 text-center">
+		<ul class="menu">
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="Menu.html">Menu</a></li>
+        <li><a href="blog.html">Food Blog</a></li>
+         <li><a href="health.html">Health</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		</ul>
+    </div>
+	<div class="col-xs-6  col-sm-2 text-center">
+		<ul class="menu" >
+        <li><a href="Terms.html">Terms and Conditions</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+		<li><a href="careers.html">Careers</a></li>
+        <li><a href="MyAccount.html">My Account</a></li>
+		<li><a href="#reviews">Reviews</a></li>
+		</ul>
+    </div>
+	<div class="col-xs-12 col-sm-4  text-center">
+      <p><b>Newsletter Sigup</b></p>
+      <p>Get notified each time we add our new recipe</p>
+      <form class="form-inline ">Sign up of News and offers
+    <br>
+   <input type="email" class="form-control"  placeholder="Email Address">
+   <button type="button" class="btn"><i class="fa fa-paper-plane"></i></button>
+ </form>
+    </div>
+	<div class=" col-xs-12 col-sm-4 text-right contactFitfoodie" >
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span><a href="tel:+00 1515151515">+00 1515151515</a></p>
+      <p><span class="glyphicon glyphicon-envelope"></span><a href="mailto:contact@fitfoodie.com"> contact@fitfoodie.com </a></p>
+    </div>
+  </div>
+<br>
+ <div class="row ">
+    
+<div class="col-xs-12 col-sm-12 text-center">&copy; 2016 FitFoodie. All rights reserved 
+</div>
+</div>
+<div class="socialDiv" >
+	<ul class="social">
+    <li><a href="https://twitter.com/fitfoodie" title="Twitter" >
+		<i class="fa fa-twitter-square fa-2x"  ></i>
+        </a></li>
+	<li><a href="https://www.facebook.com/fitfoodie" title="Facebook"  >
+		<i class="fa fa-facebook-square fa-2x" ></i>
+        </a></li>
+    <li><a href="https://www.instagram.com/fitfoodie" title="Instagram" >
+		<i class="fa fa-instagram fa-2x"  ></i>
+        </a></li>
+    <li><a href="https://in.pinterest.com/fitfoodie" title="Pinterest" >
+		<i class="fa fa-pinterest-square fa-2x"></i>
+        </a></li>
+	<li><a href="https://www.snapchat.com/fitfoodie" title="Snapchat">
+		<i class="fa fa-snapchat-square fa-2x" ></i>
+        </a>
+	</li>
+  </ul>
+</div>
+
+
+</body>
+</html>
+

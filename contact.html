@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <link href="contact.css" rel="stylesheet" type="text/css">
+  <link href="stuck.css" rel="stylesheet" type="text/css">
+ <script src="contact.js"></script>
+  <script src="modalValidation.js"></script>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="homepage.html"><img class="img-responsive" src="Images/logo.png"></img></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="aboutus.html">ABOUT</a></li>
+        <li><a href="Menu.html">MENU</a></li>
+        <li><a href="blog.html">FOOD BLOG</a></li>
+        <li><a href="careers.html">CAREERS</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+		<li><a href="#mySignUpModal" data-toggle="modal" data-target="#mySignUpModal"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
+     <li><a href="#myLoginModal" data-toggle="modal" data-target="#myLoginModal"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+		 <li><a href="Add to Cart.html" ><span class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></span></a></li>
+		
+		</ul>
+    </div>
+  </div>
+</nav>
+<!-- Login Modal -->
+<div id="myLoginModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+   <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body">
+        <form autocomplete="on" method="post" >
+  <div class="form-group">
+    <label for="Username">Email address<b class="txtred">*</b>:</label>
+    <input type="email" class="form-control" name="Username">
+  </div>
+  <div class="form-group">
+    <label for="Password">Password<b class="txtred">*</b>:</label>
+    <input type="password" class="form-control" name="Password">
+  </div>
+  <button name="Submit" type="submit" class="btn btn-default" id="loginButton">Login</button>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>	
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Sign up Modal -->
+<div id="mySignUpModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" id="closeButton">&times;</button>
+        <h4 class="modal-title">Sign up!</h4>
+      </div>
+      <div class="modal-body">
+        <form autocomplete="on" method="get">
+	 <div class="form-group">
+    <label for="firstname">First Name<b class="txtred">*</b>:</label>
+    <input type="text" class="form-control" id="firstname">
+  </div>
+	<div class="form-group">
+    <label for="lastname">Last Name<b class="txtred">*</b>:</label>
+    <input type="text" class="form-control" id="lastname">
+  </div>
+  <div class="form-group">
+    <label for="regEmail">Email address<b class="txtred">*</b>:</label>
+    <input type="email" class="form-control" id="regEmail"> <br>
+	<span id="emailSpan" class="txtred"> </span>
+  </div>
+  <div class="form-group">
+    <label for="pass">Password<b class="txtred">*</b>:</label>
+    <input type="password" class="form-control" id="pass"> <br>
+	<span id="passSpan" class="txtred"> </span>
+  </div>
+	<div class="form-group">
+    <label for="confirmpass">Confirm Password<b class="txtred">*</b>:</label>
+    <input type="password" class="form-control" id="confirmpass"> <br>
+	<span id="confirmPassSpan" class="txtred"> </span>
+  </div>
+  <button type="submit" class="btn btn-default" id="registerUser">Sign up</button>
+	<span id="warning1" class="txtred"> </span>
+	<br><span id="registerSuccess" > </span>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="closeButton">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container-fluid jumbotron " style="background-image:url('Images/contact.jpg');background-repeat:no-repeat;background-size:cover;">
+ <h1 class="text-center" style="color:#892c3d">Get in Touch</h1> 
+
+</div>
+ <div class="container">
+<div class="row">	
+  <div class="col-sm-7" >
+	<h4>We would love to hear from you!</h4>
+
+      <form ng-app="myApp"  ng-controller="validateCtrl" name="myForm" novalidate  method="get" ng-submit="submitForm()">
+	 <div class="form-group">
+    <label for="fullname">Your Name<b class="txtred">*</b>:</label>
+    <input type="text" class="form-control" id="fullname"  name="user" ng-model="user" required>
+	<span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+  <span ng-show="myForm.user.$error.required">Name is required.</span>
+  </span>
+  </div>
+  <div class="form-group">
+    <label for="email">Email address<b class="txtred">*</b>:</label>
+    <input type="email" class="form-control" id="email"  name="email" ng-model="email" required>
+	<span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+  <span ng-show="myForm.email.$error.required">Email is required.</span>
+  <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+  </span>
+  </div>
+	<div class="form-group">
+    <label for="commentArea">Your Message:</label>
+    <textarea class="form-control" name="commentArea" rows="5"> </textarea>
+  </div>
+	
+  <button type="submit" class="btn btn-primary" id="submitFeedback"  ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+  myForm.email.$dirty && myForm.email.$invalid">Submit</button>
+</form>
+
+
+  </div>
+  <div class="col-sm-5">
+	 <div class="well"  style="color:black ;background-color:#fdfafb">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> 432,Summer Street,Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> <a href="tel:+00 1515151515" style="color:black">+00 1515151515</a></p>
+      <p><span class="glyphicon glyphicon-envelope"></span><a href="mailto:contact@fitfoodie.com" style="color:black"> contact@fitfoodie.com </a> </p>
+		
+    </div>
+    <div class="well" style="color:black ;background-color:#fdfafb">
+       <p>Follow us on:</p>
+		<div class="socialDivContact" >
+	
+    <a href="https://twitter.com/fitfoodie" title="Twitter" >
+		<i class="fa fa-twitter-square fa-3x"  ></i>
+        </a>
+	<a href="https://www.facebook.com/fitfoodie" title="Facebook"  >
+		<i class="fa fa-facebook-square fa-3x" ></i>
+        </a>
+   <a href="https://www.instagram.com/fitfoodie" title="Instagram" >
+		<i class="fa fa-instagram fa-3x"  ></i>
+        </a>
+  <a href="https://in.pinterest.com/fitfoodie" title="Pinterest" >
+		<i class="fa fa-pinterest-square fa-3x" ></i>
+        </a>
+<a href="https://www.snapchat.com/fitfoodie" title="Snapchat">
+		<i class="fa fa-snapchat-square fa-3x" ></i>
+        </a>
+
+</div>
+    </div>
+    <div class="well" style="color:black ;background-color:#fdfafb">
+      <div id="googleMap" style="height:200px;width:100%;"></div>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+function initialize() {
+var mapProp = {
+  center:myCenter,
+  zoom:12,
+  scrollwheel:false,
+  draggable:false,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+    </div>
+   
+  </div>
+</div>
+<hr>
+</div>
+
+<!-- Container (Footer Section) -->
+<div  class="container-fluid" style ="background-color:#84a96c;color:black">
+  
+  <div class="row ">
+    <div class="col-xs-6 col-sm-2 text-center">
+		<ul class="menu">
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="Menu.html">Menu</a></li>
+        <li><a href="blog.html">Food Blog</a></li>
+         <li><a href="health.html">Health</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		</ul>
+    </div>
+	<div class="col-xs-6  col-sm-2 text-center">
+		<ul class="menu" >
+        <li><a href="Terms.html">Terms and Conditions</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+		<li><a href="careers.html">Careers</a></li>
+        <li><a href="MyAccount.html">My Account</a></li>
+		<li><a href="#reviews">Reviews</a></li>
+		</ul>
+    </div>
+	<div class="col-xs-12 col-sm-4  text-center">
+      <p><b>Newsletter Sigup</b></p>
+      <p>Get notified each time we add our new recipe</p>
+      <form class="form-inline ">Sign up of News and offers
+    <br>
+   <input type="email" class="form-control"  placeholder="Email Address">
+   <button type="button" class="btn"><i class="fa fa-paper-plane"></i></button>
+ </form>
+    </div>
+	<div class=" col-xs-12 col-sm-4 text-right contactFitfoodie" >
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span><a href="tel:+00 1515151515">+00 1515151515</a></p>
+      <p><span class="glyphicon glyphicon-envelope"></span><a href="mailto:contact@fitfoodie.com"> contact@fitfoodie.com </a></p>
+    </div>
+  </div>
+<br>
+ <div class="row ">
+    
+<div class="col-xs-12 col-sm-12 text-center">&copy; 2016 FitFoodie. All rights reserved 
+</div>
+</div>
+<div class="socialDiv" >
+	<ul class="social">
+    <li><a href="https://twitter.com/fitfoodie" title="Twitter" >
+		<i class="fa fa-twitter-square fa-2x"  ></i>
+        </a></li>
+	<li><a href="https://www.facebook.com/fitfoodie" title="Facebook"  >
+		<i class="fa fa-facebook-square fa-2x" ></i>
+        </a></li>
+    <li><a href="https://www.instagram.com/fitfoodie" title="Instagram" >
+		<i class="fa fa-instagram fa-2x"  ></i>
+        </a></li>
+    <li><a href="https://in.pinterest.com/fitfoodie" title="Pinterest" >
+		<i class="fa fa-pinterest-square fa-2x"></i>
+        </a></li>
+	<li><a href="https://www.snapchat.com/fitfoodie" title="Snapchat">
+		<i class="fa fa-snapchat-square fa-2x" ></i>
+        </a>
+	</li>
+  </ul>
+</div>
+
+
+</body>
+</html>
+
