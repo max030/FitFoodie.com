@@ -8,7 +8,9 @@ Customer is allowed to pick indegrients for a particular recipe for anydish and 
 following featueres
 
 1. Login and logout feature using ajax.
+
 2.Dynamic update of values and selection of varios feature of every dish with calorie count by selecting indegrients, for current page and 
 item to be added to the cart.
+
 3. Total 10 pages created with extra sub pages for menus , user account, checkout features(19 browsing pages).
 
